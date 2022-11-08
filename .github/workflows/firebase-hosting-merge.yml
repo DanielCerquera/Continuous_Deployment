@@ -5,10 +5,8 @@ name: Deploy to Firebase Hosting on merge
       - master
 jobs:
   bulid_and_deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latet
     steps:
-     - uses: actions/checkout@v2
-     - uses: FirebaseExtended/action-hosting-deploy@v0
       with:
         repoToken: '${{ secrests.GITHUB_TOKEN }}'
         firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DATACLOUDER_DEMO_GIT_ACTIONS }}'
